@@ -23,21 +23,72 @@
   </header>
   <main>
     <div class="content">
+      <div class="overlay"></div>
+      <img src="images/cropped.png" class="mobile" alt="">
       <div id="circle" class="circle">
-        <div class="feature">
+        <div class="feature one">
           <img src="images/photographer.svg" alt="">
+          <div>
+            <h1>Camera</h1>
+            <p>
+              12MP, Wide Angle Lens
+            </p>
+          </div>
         </div>
-        <div class="feature">
+        <div class="feature two">
           <img src="images/cpu.svg" alt="">
+          <div>
+            <h1>Processor</h1>
+            <p>
+              Snapdragon Octa-core 11nm
+            </p>
+          </div>
         </div>
-        <div class="feature">
+        <div class="feature three">
           <img src="images/phone.svg" alt="">
+          <div>
+            <h1>Display</h1>
+            <p>
+              6.5" Mini-Drop FullScreen
+            </p>
+          </div>
         </div>
-        <div class="feature">
+        <div class="feature four">
           <img src="images/battery.svg" alt="">
+          <div>
+            <h1>Battery</h1>
+            <p>
+              5000mAh, 720hrs Standby
+            </p>
+          </div>
         </div>
       </div>
     </div>
+    <div class="controls">
+      <img src="images/up-arrow.svg" id="upBtn" alt="">
+      <h3>Features</h3>
+      <img src="images/up-arrow.svg" id="downBtn" alt="">
+    </div>
   </main>
+
+  <script>
+    var circle = document.getElementById("circle");
+    var upBtn = document.getElementById("upBtn");
+    var downBtn = document.getElementById("downBtn");
+
+    var rotateValue = circle.style.transform;
+    var rotateSum;
+
+    upBtn.onclick = function() {
+      rotateSum = rotateValue + "rotate(-90deg)";
+      circle.style.transform = rotateSum;
+      rotateValue = rotateSum;
+    }
+    downBtn.onclick = function() {
+      rotateSum = rotateValue + "rotate(90deg)";
+      circle.style.transform = rotateSum;
+      rotateValue = rotateSum;
+    }
+  </script>
 </body>
 </html>
