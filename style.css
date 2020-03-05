@@ -11,3 +11,59 @@ body {
   overflow: hidden;
   background: linear-gradient(to right, #9c27b0, #8ecdff);
 }
+
+.navbar {
+  width: 80%;
+  position: sticky;
+  margin: 20px auto;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  flex-basis: 20%;
+}
+
+.logo h3{
+  width: 150px;
+}
+
+.navbar__links {
+  flex: 1;
+  text-align: right;
+}
+
+.navbar__links ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+.navbar__links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.content {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  transform: translateY(-50%);
+}
+#circle {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: #ccc;
+}
+.feature {
+  position: absolute;
+}
+.feature img {
+  width: 70px;
+}
